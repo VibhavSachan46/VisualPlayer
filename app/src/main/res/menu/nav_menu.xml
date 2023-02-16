@@ -3,7 +3,7 @@
 
     <item android:id="@+id/feedbackNav"
         android:title= "@string/feedback"
-        android:icon="@drawable/ic_folder"/>
+        android:icon="@drawable/ic_feedback"/>
 
     <item android:id="@+id/themes"
         android:title="@string/themes"
@@ -11,14 +11,14 @@
 
     <item android:id="@+id/sortOrderNav"
         android:title="@string/sort_order"
-        android:icon="@drawable/ic_folder"/>
+        android:icon="@drawable/ic_sort"/>
 
-    <item android:id="@+id/aboutNav"
-        android:title="@string/about"
-        android:icon="@drawable/ic_folder"/>
+    <item android:id="@+id/donate"
+        android:title="@string/donate"
+        android:icon="@drawable/ic_donate"/>
 
     <item android:id="@+id/exitNav"
         android:title="@string/exit"
-        android:icon="@drawable/ic_folder"/>
+        android:icon="@drawable/ic_exit"/>
 
 </menu>
