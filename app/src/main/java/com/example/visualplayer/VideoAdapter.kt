@@ -1,15 +1,17 @@
 package com.example.visualplayer
 
 import android.content.Context
+import android.text.format.DateUtils
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.visualplayer.databinding.ActivityFolderFragmentBinding
 import com.example.visualplayer.databinding.VideoViewBinding
 
-class VideoAdapter(private val context: Context, private var videoList: ArrayList<String>): RecyclerView.Adapter<VideoAdapter.MyHolder>() {
+class VideoAdapter(private val context: Context, private var videoList: ArrayList<Video>): RecyclerView.Adapter<VideoAdapter.MyHolder>() {
     class MyHolder(binding: VideoViewBinding): RecyclerView.ViewHolder(binding.root) {
         val title = binding.videoName
+        val folder = binding.folderName
+        val duration = binding.duration
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
@@ -17,7 +19,9 @@ class VideoAdapter(private val context: Context, private var videoList: ArrayLis
     }
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
-        holder.title.text = videoList[position]
+        holder.title.text = videoList[position].title
+        holder.folder.text = videoList[position].folderName
+        holder.duration.text = DateUtils.formatElapsedTime(videoList[position].duration/1000)
     }
 
     override fun getItemCount(): Int {
