@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">My Videos</string>
+    <string name="all_videos">All Videos</string>
+    <string name="all_folders">All Folders</string>
+    <string name="total_videos">All Videos</string>
+    <string name="total_folders">All Folders</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="feedback">Feedback</string>
+    <string name="sort_order">Sort Order</string>
+    <string name="themes">Themes</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="Video_name">Video name</string>
+    <string name="Folder_name">Folder name</string>
+    <string name="duration">00.00</string>
+    <string name="image">Image</string>
+    <string name="welcome">Welcome!!</string>
+</resources>
