@@ -20,4 +20,5 @@
     <item android:id="@+id/exitNav"
         android:title="@string/exit"
         android:icon="@drawable/ic_folder"/>
+
 </menu>

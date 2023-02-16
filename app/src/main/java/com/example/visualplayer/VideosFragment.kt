@@ -15,9 +15,6 @@ class VideosFragment : Fragment() {
         val view = inflater.inflate(R.layout.activity_videos_fragment, container, false)
         val binding = ActivityVideosFragmentBinding.bind(view)
         val tempList = ArrayList<String>()
-
-
-
         binding.VideoRV.setHasFixedSize(true)
         binding.VideoRV.setItemViewCacheSize(10)
         binding.VideoRV.layoutManager = LinearLayoutManager(requireContext())
