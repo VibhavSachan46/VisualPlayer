@@ -3,10 +3,10 @@
 
     <item android:id="@+id/videoView"
         android:title="@string/all_videos"
-        android:icon="@drawable/ic_folder"/>
+        android:icon="@drawable/play"/>
 
     <item android:id="@+id/folderView"
         android:title="@string/all_folders"
-        android:icon="@drawable/ic_folder"/>
+        android:icon="@drawable/folder"/>
 
 </menu>
