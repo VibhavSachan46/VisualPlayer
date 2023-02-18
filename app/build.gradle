@@ -55,4 +55,19 @@ dependencies {
 
     //coroutine
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    //GIF
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
+//    //for vertical progress bar
+//    implementation 'com.github.lukelorusso:VerticalSeekBar:1.2.7'
+
+//    //for doubleTapFeature
+//    implementation 'com.github.vkay94:DoubleTapPlayerView:1.0.4'
+
+//    //for playing online content
+//    implementation 'com.google.android.exoplayer:exoplayer-dash:2.16.1'
+//
+//    //custom chrome tabs for integrating youtube
+//    implementation "androidx.browser:browser:1.4.0"
 }

@@ -32,7 +32,7 @@ class VideoAdapter(private val context: Context, private var videoList: ArrayLis
         Glide.with(context)
             .asBitmap()
             .load(videoList[position].artUri)
-            .apply(RequestOptions().placeholder(R.mipmap.ic_launcher_round).centerCrop())
+            .apply(RequestOptions().placeholder(R.drawable.loading).centerCrop())
             .into(holder.image)
 
         holder.root.setOnClickListener{

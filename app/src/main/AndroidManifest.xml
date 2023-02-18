@@ -33,7 +33,8 @@
         </activity>
         <activity
             android:name=".PlayerActivity"
-            android:exported="false">
+            android:exported="false"
+            android:configChanges="uiMode|orientation|screenSize|screenLayout">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
