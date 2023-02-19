@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity() {
             }
             return@setNavigationItemSelectedListener true
         }
+
     }
 
     private fun setFragment(fragment: Fragment){
@@ -71,9 +72,6 @@ class MainActivity : AppCompatActivity() {
         transaction.disallowAddToBackStack()
         transaction.commit()
     }
-
-
-
 
 
     //for requesting permission
