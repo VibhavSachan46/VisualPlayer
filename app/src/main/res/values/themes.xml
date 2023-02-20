@@ -35,7 +35,7 @@
     </style>
 
     <style name="statusColor">
-        <item name="android:statusBarColor">@color/blue</item>
+        <item name="android:statusBarColor">#6e94c3</item>
     </style>
 
     //for Player Activity
@@ -59,10 +59,10 @@
     <!-- Defined a new style with three items of color. -->
     <style name="DemoTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimary">@color/primary</item>
 
         <!-- Defining that new color in ColorPrimaryDark -->
-        <item name="colorPrimaryDark">@color/blue</item>
-        <item name="colorAccent">@color/blue</item>
+        <item name="colorPrimaryDark">@color/primary</item>
+        <item name="colorAccent">@color/primary</item>
     </style>
 </resources>

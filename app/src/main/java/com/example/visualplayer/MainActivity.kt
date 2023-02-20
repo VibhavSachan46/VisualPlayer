@@ -55,10 +55,10 @@ class MainActivity : AppCompatActivity() {
         }
         binding.navView.setNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.feedbackNav -> Toast.makeText(this, "Feedback", Toast.LENGTH_SHORT).show()
-                R.id.themes -> Toast.makeText(this, "Themes", Toast.LENGTH_SHORT).show()
+//                R.id.feedbackNav -> Toast.makeText(this, "Feedback", Toast.LENGTH_SHORT).show()
+//                R.id.themes -> Toast.makeText(this, "Themes", Toast.LENGTH_SHORT).show()
                 R.id.sortOrderNav-> Toast.makeText(this, "Sort Order", Toast.LENGTH_SHORT).show()
-                R.id.donate -> Toast.makeText(this, "About", Toast.LENGTH_SHORT).show()
+//                R.id.donate -> Toast.makeText(this, "About", Toast.LENGTH_SHORT).show()
                 R.id.exitNav -> exitProcess(1)
             }
             return@setNavigationItemSelectedListener true

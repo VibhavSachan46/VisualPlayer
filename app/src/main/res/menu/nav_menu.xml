@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/feedbackNav"
-        android:title= "@string/feedback"
-        android:icon="@drawable/ic_feedback"/>
 
-    <item android:id="@+id/themes"
-        android:title="@string/themes"
-        android:icon="@drawable/ic_folder"/>
 
     <item android:id="@+id/sortOrderNav"
         android:title="@string/sort_order"
         android:icon="@drawable/ic_sort"/>
-
-    <item android:id="@+id/donate"
-        android:title="@string/donate"
-        android:icon="@drawable/ic_donate"/>
 
     <item android:id="@+id/exitNav"
         android:title="@string/exit"
