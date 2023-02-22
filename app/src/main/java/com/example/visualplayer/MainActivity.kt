@@ -3,16 +3,20 @@ package com.example.visualplayer
 import android.Manifest.permission.WRITE_EXTERNAL_STORAGE
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import com.example.visualplayer.databinding.ActivityMainBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.io.File
 import kotlin.system.exitProcess
 
@@ -24,10 +28,15 @@ class MainActivity : AppCompatActivity() {
     companion object{
         lateinit var videoList: ArrayList<Video>
         lateinit var folderList: ArrayList<Folder>
+        lateinit var searchList: ArrayList<Video>
+        var search: Boolean=false
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?)
     {
+
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(getColor(R.color.primary)))
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
 
@@ -55,10 +64,13 @@ class MainActivity : AppCompatActivity() {
         }
         binding.navView.setNavigationItemSelectedListener {
             when(it.itemId){
-//                R.id.feedbackNav -> Toast.makeText(this, "Feedback", Toast.LENGTH_SHORT).show()
-//                R.id.themes -> Toast.makeText(this, "Themes", Toast.LENGTH_SHORT).show()
-                R.id.sortOrderNav-> Toast.makeText(this, "Sort Order", Toast.LENGTH_SHORT).show()
-//                R.id.donate -> Toast.makeText(this, "About", Toast.LENGTH_SHORT).show()
+                R.id.sortOrderNav-> {
+                    val menuItems = arrayOf("Latest","Oldest","Name(Z to A)", "Name(Z to A", "File Size", "File size")
+                    val dialog = MaterialAlertDialogBuilder(this)
+                        .setTitle("Sort By")
+                        .create()
+                    dialog.show()
+                }
                 R.id.exitNav -> exitProcess(1)
             }
             return@setNavigationItemSelectedListener true

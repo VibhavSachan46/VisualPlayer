@@ -40,6 +40,9 @@ class VideoAdapter(private val context: Context, private var videoList: ArrayLis
                 isFolder -> {
                     sendIntenet(pos=position, ref = "FolderActivity")
                 }
+                MainActivity.search-> {
+                    sendIntenet(pos=position, ref = "SearchedVideos")
+                }
                 else -> {
                     sendIntenet(position, ref= "AllVideos")
                 }
@@ -56,5 +59,11 @@ class VideoAdapter(private val context: Context, private var videoList: ArrayLis
         val intent = Intent(context, PlayerActivity::class.java)
         intent.putExtra("class",ref)
         ContextCompat.startActivity(context, intent,null)
+    }
+
+    fun updateList(searchList: ArrayList<Video>){
+        videoList = ArrayList()
+        videoList.addAll(searchList)
+        notifyDataSetChanged()
     }
 }
